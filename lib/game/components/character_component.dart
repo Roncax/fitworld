@@ -119,7 +119,7 @@ class CharacterComponent extends PositionComponent with HasGameReference {
     _hpBar.size.x = size.x * hpFraction;
     _hpBar.paint.color = hpFraction > 0.5
         ? const Color(0xFF00FF00)
-        : hpRatio > 0.25
+        : hpFraction > 0.25
             ? const Color(0xFFFFAA00)
             : const Color(0xFFFF0000);
   }

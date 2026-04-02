@@ -7,8 +7,8 @@ import 'notification_service.dart';
 
 /// Orchestrates startup: load persisted characters, sync new workouts, apply decay.
 class WorldController extends ChangeNotifier {
-  final FirestoreService _firestore = FirestoreService();
-  final HealthService _health = HealthService();
+  late final FirestoreService _firestore = FirestoreService();
+  late final HealthService _health = HealthService();
   late final NotificationService _notifications = NotificationService(_firestore);
 
   FitWorldGame? game;
